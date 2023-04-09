@@ -1,0 +1,110 @@
+#program1
+'''def fun1():
+    str1=input()
+    l_count=0
+    d_count=0
+    for i in str1:
+        if i.isalpha():
+            l_count=l_count+1
+        if i.isdigit():
+            d_count=d_count+1
+        else:
+            continue
+    return[l_count,d_count]
+print(fun1())'''
+#program2
+'''def find_pairs_of_numbers(num_list,n):
+    count=0
+    for i in num_list:
+        index=num_list.index(x)+1
+        for y in range(index,len(num_list)): 
+            if x+num_list[y]==n:
+                count=count+1
+    return count
+num_list=[1,2,7,4,5,6,0,3]
+n=6
+find_pairs_of_numbers(num_list,n)'''
+#program3
+'''def fun1():
+    list_str=input()
+    if len(list_str)<2:
+        return -1
+    elif len(list_str)==2:
+        return (list_str+list_str)
+    else:
+        return list_str[0:2]+list_str[-2:]
+print(fun1())'''
+#program4
+'''def fun1():
+    list_str=input()
+    if len(list_str)<3:
+        return list_str
+    elif list_str[-3:]=="ing":
+        return list_str+"ly"
+    elif list_str[-3:]!="ing":
+        return list_str+"ing"
+print(fun1())  '''  
+    #pogram5
+'''def check_double(number):
+    num1=str(number*2)
+    number=str(number)
+    count=0
+    for x in number:
+        if x in num1:
+            count=count+1
+        else:
+            return False
+    if count==len(number):
+        return True
+print(chek_double(245))
+print(chek_double(125874))'''
+#prgram6
+'''list_of_marks=(12,18,25,24,2,5,18,20,20,21)) 
+def find_more_than_average(mytuple):
+    marks=0
+    count=0
+    for x in list_of_marks:
+        marks+=x
+    average=marks/len(list_of_marks)
+    for x in list_of_marks:
+        if x>average:
+            count+=1
+    percentage=(count*100/len(list_of_marks)
+    return percentage            
+def generate_frequency():
+    freq=[]
+    for x in range(26):
+        count=0
+        for y in list_of_marks:
+            if x==y:
+                count+=1
+        freq.append(count)        
+    return freq
+def sort_marks():
+    list_of_marks=sorted(list_of_marks)
+    return list_of_marks
+print(find_more_than_average(12,18,25,24,2,5,18,20,20,21))'''
+#program7
+'''def translate(dict1,res):
+    res=[]
+    for key in list1:
+        res.append(dict1(i))
+dict1={"merry":"god","chirstmas":"jul","and":"ohc","happy":"gott","new":"nytt","year":"ar"}
+list1=["merry","chirstmas"]
+print(translate(dict1,res))'''
+
+#program8
+n1=int(input())
+n2=int(input())
+result=[]
+array=[i for i in range(n1,n2+1)]
+print(array)
+for i in range(len(array)):
+    for j in range(i,len(array)):
+        result.append(array[i:j+1])
+print(result)
+c=0
+for i in result:
+    if sum(i)%2!=0:
+        c+=1
+print(c
