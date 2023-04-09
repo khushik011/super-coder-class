@@ -1,0 +1,113 @@
+datatypes-string,int,float,boolean,complex
+n=int(input("Enter a number"))
+if(n%3 == 0 & n%5 == 0):
+    print("multiple of both 3 and 5")
+elif(n%5 == 0):
+    print("multiple of 5")
+elif(n%3 == 0):
+    print("multiple of both 3")
+else:
+    print("invalid")
+
+
+#odd and even number
+for i in range (1,101):#(start,end,step(default step is 1))
+    print(i,end='')
+print( )    
+#print takes the parameters(no of objects,separator ='',end="/n")
+for i in range (1,101,2):#odd number
+    print(i,end='')
+print( )    
+for i in range (2,101,2):#even number
+    print(i,end='')
+
+#100 to 1
+for i in range (100,0,-1):
+    print(i,end=' ')
+print( )
+for i in range (99,0,-2):
+    print(i,end=' ')
+print( )
+for i in range (100,1,-2):
+    print(i,end=' ')
+print( )
+
+#break
+for i in range(0,101):
+    
+    if(i==50):
+        break
+    else:
+        print(i,end=" ")#first condition then iteration
+
+        
+#continue
+for i in range(0,101):#else part will execute if and only the sucessful compilation of the if statement
+    if(i==50):
+        continue
+    else:
+        print(i,end=" ")
+#pass-does nothing empty statement use like semi colon in java
+for i in range(0,101):
+    if(i==50):
+        pass
+    else:
+        print(i,end=" ")        
+        
+
+#function
+def fun1():
+    print("its a function")
+fun1()    
+def fun2(num1,num2):
+    print("its a function")
+fun2(10,20)   ''' 
+
+#__str__(magical function)it will return the any type of data as string in the output
+def fun3(num1,num2):
+    num3=num1+num2
+    return num3
+def fun4(n1,n2):
+    n3=float(n1)+n2
+    print(n3)
+fun4('10',20.3)    
+    
+
+#based on arguments
+#1.positional arguments
+def fun1(num1,num2,num3,num4):
+    print("num1",num1,"num2",num2,"num3",num3,"num4",num4)
+fun1(1,2,3,4)  #we can not pass lesser value or greater value
+
+
+#2.keyword arguments
+def fun2(num1,num2,num3,num4):
+    print("num1",num1,"num2",num2,"num3",num3,"num4",num4)
+fun2(num4=1,num3=2,num1=3,num2=4)
+#we can give same value to two parameter(what value should be pass to which formal parameter) 
+fun2(num4=1,num3=1,num1=3,num2=4)#when data is sent to a function it is sent from right to left
+#default arguments
+def fun3(name,rollno,branch="cse",collegename="giet"):
+    print(name,rollno,branch,collegename)
+fun3("khushi",292)
+fun3("priya",005,"cse","gayatri")
+fun3("bhavesh",245,"cse","giet")#in both type we can pass the value.Default value always in the right hand side because it should assign first
+
+
+
+#function overloading
+def fun4(*var):#variable numbers of parameter
+    for i in var:
+        print(i,end=" ")
+fun4(10,20)
+print()
+fun4(10,20,30)
+print()
+fun4(10,20,40,50)
+def add(*var):
+    sum1=0
+    for i in var:
+        sum1=sum1+i
+    return sum1
+print(add(10,20))
+print(add(10,20,30))
